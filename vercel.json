@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/webhook.js", "use": "@vercel/node" },
+    { "src": "api/stripe-webhook.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/webhook", "dest": "/api/webhook.js" },
+    { "src": "/api/stripe-webhook", "dest": "/api/stripe-webhook.js" }
+  ]
+}
